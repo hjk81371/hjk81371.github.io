@@ -1,10 +1,11 @@
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     background-color: #617d88;
 }
 
 nav {
-    background-color: #7d7c7c;
+    background-color: rgb(168, 184, 209);
     display: flex;
     justify-content: right;
 }
@@ -49,7 +50,11 @@ footer a:hover {
 }
 
 .content {
-    background-color: #1a556a;
+    background-image: url(../images/4k-mountain.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -62,9 +67,9 @@ a:hover {
 }
 
 hr {
-    border: #57b5d5;
-    border-style: groove;
-    border-width: 0.4rem;
+    border: white;
+    border-style: dashed;
+    border-width: 0.12rem;
 }
 
 #archimg {
@@ -82,16 +87,15 @@ hr {
 }
 
 #profileimg {
-    height: 300px;
+    height: 15rem;
     width: auto;
     margin: 8px 25px 0px 8px;
-    border-radius: 5%;
+    border-radius: 10%;
+    border: 2px white solid;
 }
 
 .introduction {
     font-weight: bolder;
-    display: flex;
-    flex-wrap: wrap;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 16pt;
 }
@@ -100,8 +104,9 @@ h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.introduction h2 {
-    color: #57b5d5;
+.introduction-container h2 {
+    text-align: center;
+    color: white;
 }
 
 .three-col {
@@ -112,6 +117,14 @@ h2 {
     padding-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .three-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .one-col {
     background-color: #383536;
     display: grid;
@@ -120,47 +133,34 @@ h2 {
 }
 
 .card {
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    width: 300px;
+    width: 300px; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin: 10px;
-    text-align: center;
-    box-shadow: 4px 6px 8px 6px #57b5d5;
-}
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the card image */
+  .card-image {
+    background-size: contain;
+    background-position: center;
+  }
+  
+  /* Style for the card content */
+  .card-content {
+    padding: 20px;
+  }
+  
+  /* Additional styling for heading and paragraph */
+  .card-content h3 {
+    margin-top: 0;
+  }
+  
+  .card-content p {
+    margin-bottom: 0;
+  }
 
-.card:hover {
-    box-shadow: 6px 8px 10px 8px #57b5d5;
-    width: 305px;
-    border-radius: 15px;
-}
-
-.card img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.card ul {
-    display: block;
-    list-style: none;
-    padding: 0;
-}
-
-.card ul li {
-    margin: 5px;
-}
-
-.card dt {
-    display: flex;
-    text-align: left;
-    padding: 0 0 0 10px;
-}
-
-.card dd {
-    display: flex;
-}
 
 .about {
     color: #57b5d5;
@@ -203,13 +203,26 @@ input, textarea {
 
   .nav-link {
     margin: 0 10px;
-    color: #57b5d5;
+    color: white;
   }
 
   .nav-link:visited {
-    color: #57b5d5;
+    color: white;
   }
 
   .nav-link:hover {
-    color: black;
+    color: #57b5d5;
+  }
+
+  .special-contact {
+    font-size: 2000rem;
+  }
+
+  .inlineLink {
+    text-decoration: underline;
+    color: white;
+  }
+
+  .inlineLink:hover {
+    color: #57b5d5;
   }
